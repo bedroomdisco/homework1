@@ -1,0 +1,31 @@
+# Homework 1
+
+
+__author__ =  'novikov_fedor'
+
+# take name
+
+print('Hello, my name is Fred and i want to play a game with you.What is your name?')
+name = str(input())
+
+# main program
+
+print('Ok,let\'s start',name,'!')
+i = 0
+d = 0
+your_answer = str
+
+questions = ['When was released the first edition of python?','Everything is an ...','What type of data variable can be only True or False?','What type of data variable means nothing?','If and for. What is it?','Does loop for in Python have difference from loop for in C?','What means the letter L in LEGB theory?']
+answers = ['2008','Object','bool','None','loops','Yes','Local']
+
+for i in range(len(questions)):
+     print(questions[i])
+     your_answer = str(input())
+     if answers[i] == your_answer:
+         d = d + 1
+         print('Good job. Your first right answer.') if d == 1 else print('Nice! You have ',d,' right answers!')
+     else:
+         print('Stop it, ',name,' !')
+         print('Right answer is ',answers[i],'!')
+         print('What is going on m8? Your answer is wrong! You have no right answers!') if d == 0 else print('Pull yourself together! You have ',d,' answers!')
+     i = i + 1
